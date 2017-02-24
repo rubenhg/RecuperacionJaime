@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 24-feb-2017 14:07:01 by Hibernate Tools 5.2.0.CR1 -->
+<hibernate-mapping>
+    <class name="Notas" table="notas" catalog="bbdd_escuela" optimistic-lock="version">
+        <id name="idauto" type="java.lang.Integer">
+            <column name="IDAuto" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="alumnos" class="Alumnos" fetch="select">
+            <column name="alumno" not-null="true" />
+        </many-to-one>
+        <many-to-one name="asignaturas" class="Asignaturas" fetch="select">
+            <column name="asignatura" not-null="true" />
+        </many-to-one>
+        <property name="nota" type="java.lang.Integer">
+            <column name="nota" />
+        </property>
+    </class>
+</hibernate-mapping>
