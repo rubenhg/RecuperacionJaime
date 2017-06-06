@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 06-jun-2017 9:54:14 by Hibernate Tools 5.2.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.recuperacion.model.Peliculas" table="peliculas" catalog="cartelera_hibernate" optimistic-lock="version">
+        <id name="codigo" type="java.lang.Integer">
+            <column name="Codigo" />
+            <generator class="identity" />
+        </id>
+        <property name="titulo" type="string">
+            <column name="Titulo" length="50" not-null="true" />
+        </property>
+        <property name="fecha" type="date">
+            <column name="Fecha" length="10" not-null="true" />
+        </property>
+        <property name="presupuesto" type="double">
+            <column name="Presupuesto" precision="8" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

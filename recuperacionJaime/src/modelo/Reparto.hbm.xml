@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 06-jun-2017 9:54:14 by Hibernate Tools 5.2.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.recuperacion.model.Reparto" table="reparto" catalog="cartelera_hibernate" optimistic-lock="version">
+        <id name="codigo" type="java.lang.Integer">
+            <column name="Codigo" />
+            <generator class="identity" />
+        </id>
+        <property name="CActor" type="java.lang.Integer">
+            <column name="C_actor" />
+        </property>
+        <property name="CPelicula" type="java.lang.Integer">
+            <column name="C_pelicula" />
+        </property>
+    </class>
+</hibernate-mapping>
